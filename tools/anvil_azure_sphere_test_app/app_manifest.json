@@ -1,0 +1,15 @@
+{
+    "SchemaVersion":1,
+    "Name":"AzureBusybox",
+    "ComponentId":"61ae5c57-98cd-4a0a-8b60-9509505c7617",
+    "EntryPoint":"/bin/app",
+    "CmdArgs":[],
+    "Capabilities":{
+        "AllowedConnections":["192.168.35.1"],
+        "AllowedTcpServerPorts":[4444,50000,50001],
+        "NetworkConfig":true,
+        "MutableStorage" : { "SizeKB": 64 },
+        "Uart": [ "$MT3620_ISU1_UART" ] 
+    },
+    "ApplicationType":"Default"
+}
