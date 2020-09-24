@@ -4,6 +4,8 @@ from Cryptodome.PublicKey import ECC
 from Cryptodome.Signature import DSS
 from Cryptodome.Hash import SHA256
 
+import struct
+
 _PRIVATE_KEY = '''-----BEGIN PRIVATE KEY-----
 MIGHAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBG0wawIBAQQgSxn0uAPxCKxUsISx
 PrTivexGGbxxpq5+An5KDNlZdaahRANCAATt8jPADTEUHY8/VjNDQMzYwWn7Z+Ls
@@ -27,6 +29,8 @@ ugIhAIoNe5ddI4GhgN4FWOMlnq+VgWzeP25sowIc4g4dFFtC
 -----END CERTIFICATE-----
 '''
 
+METADATA_MAGIC = 0x4D345834
+
 def calculate_signature(data, key_data=_PRIVATE_KEY):
     key = ECC.import_key(key_data)
     signer = DSS.new(key, 'fips-186-3')
@@ -39,7 +43,15 @@ def verify_signature(data, signature, key_data=_PUBLIC_KEY):
 
     verifier.verify(SHA256.new(data), signature)
 
-
+def has_signature(data):
+    # strip off the signature
+    data = data[:-0x40]
+    try:
+        metadata_len = struct.unpack("<I", data[-4:])[0]
+        magic = struct.unpack("<I", data[-metadata_len:-metadata_len + 4])[0]
+        return magic == METADATA_MAGIC
+    except:
+        return False
 
 if __name__ == "__main__":
     import argparse
@@ -47,6 +59,10 @@ if __name__ == "__main__":
 
     def sign(args):
         data = args.file.read()
+
+        if has_signature(data):
+            print("Detected existing signature, removing it!")
+            data = data[:-0x40]
 
         sig = calculate_signature(data)
 
