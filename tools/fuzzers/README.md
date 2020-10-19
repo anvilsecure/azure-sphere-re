@@ -15,7 +15,7 @@ optional arguments:
 
 * --target - Specifies the target to fuzz, defaults to 192.168.35.2
 * --gui - Launches the boofuzz console gui
-* -- start - Specifies the starting test case
+* --start - Specifies the starting test case
 
 ## WiFi Configuration
 
@@ -41,7 +41,7 @@ This fuzzer uses an existing image as a template and creates a boofuzz configura
 > ./image_metadata_fuzzer.py --gui templates/dev_enable_caps.bin
 ```
 
-The template image can be any file with the Image Metadata. This includes enabling capabilities, or applications.
+The template image can be any file with the image metadata. This includes enabling capabilities, or applications.
 
 The pluton debug console can be used to view some log messages that get generated from the invalid metadata:
 
