@@ -33,7 +33,7 @@ Our [tools](https://github.com/anvilventures/azure-sphere-re/wiki/Tools) include
 
 # Additional Projects
 
-A number of companies and groups have also published their findings and notes on the MS Azure Sphere device:
+Other information security companies and teams have also published their findings and notes on the MS Azure Sphere device:
 
 * [Reverse Engineering of Azure Sphere](https://github.com/Wiz-IO/azure-sphere-reverse-engineering)
 * [Azure Sphere Internals - Overview](https://www.comae.com/posts/2020-08-12_azure-sphere-internals-overview/)
