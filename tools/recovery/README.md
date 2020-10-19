@@ -1,8 +1,8 @@
 # Recovery
 
-This is a simple script that uses FTDI's bitbang mode to put the MediaTek dev kit into recovery mode.
+This simple script uses FTDI's bitbang mode to put the MediaTek dev kit into recovery mode.
 
-This script does require you to physically hit the reset button. We could do the reset automatically by putting the recovery UART (/dev/ttyUSB4) into bitband mode, but we preferred to leave it it available to the OS as a regular UART. The debug UART (/dev/ttyUSB0) can also be used to enter recovery mode, but not reset, hence the need to physically reset.
+This script does require you to physically hit the reset button. We could do the reset automatically by putting the recovery UART (/dev/ttyUSB4) into bitband mode, but we preferred to leave it available to the OS as a regular UART. The debug UART (/dev/ttyUSB0) can also be used to enter recovery mode, but not reset, hence the need to physically reset.
 
 # Using
 
