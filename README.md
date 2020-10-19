@@ -1,6 +1,6 @@
 # Azure Sphere Reverse Engineering
 
-Microsoft recently held a [closed security bounty challenge](https://www.microsoft.com/en-us/msrc/azure-security-lab-archive?rtc=1) for Azure Sphere, an application platform for internet-connected devices. While we did not participate in the three-month challenge which closed in August 2020, we were curious about the Azure Sphere devices designed with the [“seven properties of highly secured devices”](https://azure.microsoft.com/en-us/services/azure-sphere/#security) in mind. 
+Microsoft recently held a [closed security bounty challenge](https://www.microsoft.com/en-us/msrc/azure-security-lab-archive?rtc=1) for Azure Sphere, an application platform for internet-connected devices. While we did not participate in the three-month challenge which closed in August 2020, we were curious about the Azure Sphere devices which were designed with the [“seven properties of highly secured devices”](https://azure.microsoft.com/en-us/services/azure-sphere/#security) in mind. 
 
 Since development boards are cheap, we bought a few and took them apart. We tested the [Seeed MT3620 Mini Dev Board](https://www.seeedstudio.com/MT3620-Mini-Dev-Board-p-2919.html) running MS Azure Sphere OS 20.05. 
 
@@ -35,7 +35,7 @@ Our [tools](https://github.com/anvilventures/azure-sphere-re/wiki/Tools) include
 
 A number of companies and groups have also published their findings and notes on the MS Azure Sphere device:
 
-* https://github.com/Wiz-IO/azure-sphere-reverse-engineering
-* https://www.comae.com/posts/2020-08-12_azure-sphere-internals-overview/
-* https://blog.talosintelligence.com/2020/07/vuln-spotlight-azure-sphere-july-2020.html
-* https://blog.talosintelligence.com/2020/08/vuln-spotlight-microsoft-azure-aug-2020.html
+* [Reverse Engineering of Azure Sphere](https://github.com/Wiz-IO/azure-sphere-reverse-engineering)
+* [Azure Sphere Internals - Overview](https://www.comae.com/posts/2020-08-12_azure-sphere-internals-overview/)
+* {Vulnerability Spotlight: Microsoft issues security update for Azure Sphere](https://blog.talosintelligence.com/2020/07/vuln-spotlight-azure-sphere-july-2020.html)
+* [Vulnerability Spotlight: Remote code execution, privilege escalation bugs in Microsoft Azure Sphere](https://blog.talosintelligence.com/2020/08/vuln-spotlight-microsoft-azure-aug-2020.html)
