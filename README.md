@@ -18,7 +18,7 @@ During our reverse engineering, we identified three potential issues with the MS
 
 ## Reverse Engineering Notes
 
-We compiled our notes together in the form of a GitHub Wiki and is available [here](https://github.com/anvilventures/azure-sphere-re/wiki). 
+We compiled our notes together in the form of a [GitHub Wiki](https://github.com/anvilventures/azure-sphere-re/wiki). 
 
 ## Tools
 
