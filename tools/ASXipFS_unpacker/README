@@ -2,7 +2,7 @@ NOTE: This has been modified to work with Azure Sphere's ASXipFS file system.
 The read_block() function has been modified to eumlate an XIP system and disables any
 decompression. Use the -x option to extract the contents of an ASXipFS file system.
 
-Original code is here: https://github.com/npitre/cramfs-tools
+Original code is here: [Cramfs Tools](https://github.com/npitre/cramfs-tools)
 
 
 	Cramfs - cram a filesystem onto a small ROM
