@@ -37,5 +37,5 @@ A number of companies and groups have also published their findings and notes on
 
 * [Reverse Engineering of Azure Sphere](https://github.com/Wiz-IO/azure-sphere-reverse-engineering)
 * [Azure Sphere Internals - Overview](https://www.comae.com/posts/2020-08-12_azure-sphere-internals-overview/)
-* {Vulnerability Spotlight: Microsoft issues security update for Azure Sphere](https://blog.talosintelligence.com/2020/07/vuln-spotlight-azure-sphere-july-2020.html)
+* [Vulnerability Spotlight: Microsoft issues security update for Azure Sphere](https://blog.talosintelligence.com/2020/07/vuln-spotlight-azure-sphere-july-2020.html)
 * [Vulnerability Spotlight: Remote code execution, privilege escalation bugs in Microsoft Azure Sphere](https://blog.talosintelligence.com/2020/08/vuln-spotlight-microsoft-azure-aug-2020.html)
