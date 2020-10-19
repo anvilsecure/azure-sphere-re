@@ -10,7 +10,7 @@ Most of the issues we and others found have been fixed in the current release of
 
 ## Issues
 
-During our reverse engineering, we identified three potential issues with the MS Azure Sphere device.  
+During our reverse engineering, we identified three potential issues with the MS Azure Sphere operating system:  
 
 * [ASXipFS Device Nodes](https://github.com/anvilventures/azure-sphere-re/wiki/Issues#asxipfs-device-nodes) - It was possible to create app images with device nodes allowing an app access to devices it otherwise could not access.
 * [Peripheral Disable DoS](https://github.com/anvilventures/azure-sphere-re/wiki/Issues#peripheral-disable-dos) - A malicious app on the device can disable peripherals used by other apps.
