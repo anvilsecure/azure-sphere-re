@@ -1,8 +1,8 @@
 # Recovery
 
-This is a simple script that uses FTDI's bitbang mode to put he MediaTek dev kit into recovery mode.
+This is a simple script that uses FTDI's bitbang mode to put the MediaTek dev kit into recovery mode.
 
-This script does require you to physically hit the reset button. We could do the reset automatically by putting the recovery UART (/dev/ttyUSB4) into bitband mode, but we preferred to leave it it available to the OS as a regular UART. The debug UART (/dev/ttyUSB0) can also be used can also be used to enter recovery mode, but not reset, hence the need to physically reset.
+This script does require you to physically hit the reset button. We could do the reset automatically by putting the recovery UART (/dev/ttyUSB4) into bitband mode, but we preferred to leave it it available to the OS as a regular UART. The debug UART (/dev/ttyUSB0) can also be used to enter recovery mode, but not reset, hence the need to physically reset.
 
 # Using
 
@@ -19,7 +19,7 @@ This script does require you to physically hit the reset button. We could do the
 DEBUG_RTS is now high.... reset to enter recovery. Interrupt/hit enter to release DEBUG_RTS
 ```
 
-3. Press the reset button on the dev board. If you have a console connected to the Pluton/Recovery UART we can see the log messages and the request for an XMODEM transfer. At this point the recovery bootloader could be loaded via your serial console:
+3. Press the reset button on the dev board. If a console is connected to the Pluton/Recovery UART, you can see the log messages and the request for an XMODEM transfer. At this point the recovery bootloader could be loaded via your serial console:
 
 ```
 > miniterm /dev/ttyUSB4 115200
