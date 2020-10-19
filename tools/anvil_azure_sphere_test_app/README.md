@@ -1,6 +1,6 @@
 # Anvil Azure Sphere Test App
 
-This is a testing app we built, mainly to launch a busybox shell bound on port 4444. But also contains a few other commands that we built to asses the RE and exploration process.
+This is a testing app we built, mainly to launch a busybox shell bound on port 4444. It also contains a few other commands that we built to asses the RE and exploration process.
 
 # Building
 
@@ -66,20 +66,20 @@ Image package '/azsphereapp/main.imagepackage' has been deployed to the attached
 
 ### Deploy Issues
 
-If you get an error, such as:
+You may get an error, such as:
 
 ```
 error: Could not deploy application to device: Installation failed; check if application development capability is enabled ('azsphere device enable-development').
 ```
 
-It is probably because the device ran out of space to store the app. If you have other apps installed, you may need to delete them. If you are not using the debugger, we can manually remove GDB and free up some space:
+If so, it is probably because the device ran out of space to store the app. If you have other apps installed, you may need to delete them and try again. If you are not using the debugger, you can manually remove GDB and free up some space:
 
 ```
 > azsphere device sl delete -i 61ae5c57-98cd-4a0a-8b60-9509505c7617
 Component '61ae5c57-98cd-4a0a-8b60-9509505c7617' deleted.
 ```
 
-Depending on the version, the component ID for gdb maybe different, we can use the `azsphere device app show-status` command to list installed apps, and delete component IDs that do not match your apps:
+Depending on the version, the component ID for gdb maybe different. You can use the `azsphere device app show-status` command to list installed apps, and delete component IDs that do not match your apps:
 
 ```
 > azsphere device app show-status
@@ -105,7 +105,7 @@ Welcome to Anvil's Azure Sphere Test App!
 > 
 ```
 
-There is an basic online help that lists the available commands:
+Basic online help lists the available commands:
 
 ```
 > help
@@ -136,7 +136,7 @@ id
 uid=1007 gid=1007 groups=15(net-config)
 ```
 
-Using the busybox shell you can explore the system. There is no pty, so busybox will not display a prompt, or handle interrupts like ^C or ^Z, so be careful in trying to kill or suspend tasks.
+Using the busybox shell, you can explore the system. Just keep in mind, because there is no pty, busybox will not display a prompt or handle interrupts like ^C or ^Z, so be careful in trying to kill or suspend tasks.
 
 
 
