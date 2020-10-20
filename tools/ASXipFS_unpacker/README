@@ -2,7 +2,7 @@ NOTE: This has been modified to work with Azure Sphere's ASXipFS file system.
 The read_block() function has been modified to eumlate an XIP system and disables any
 decompression. Use the -x option to extract the contents of an ASXipFS file system.
 
-Original code is here: https://github.com/npitre/cramfs-tools
+Original code is here: [Cramfs Tools](https://github.com/npitre/cramfs-tools)
 
 
 	Cramfs - cram a filesystem onto a small ROM
@@ -31,14 +31,14 @@ Only the low 8 bits of gid are stored.  The current version of
 mkcramfs simply truncates to 8 bits, which is a potential security
 issue.
 
-Hard links are supported, but hard linked files
-will still have a link count of 1 in the cramfs image.
+Hard links are supported, but hard linked files will still have a link 
+count of 1 in the cramfs image.
 
 Cramfs directories have no `.' or `..' entries.  Directories (like
 every other file on cramfs) always have a link count of 1.  (There's
 no need to use -noleaf in `find', btw.)
 
-No timestamps are stored in a cramfs, so these default to the epoch
+No timestamps are stored in a cramfs, so timestamps default to the epoch
 (1970 GMT).  Recently-accessed files may have updated timestamps, but
 the update lasts only as long as the inode is cached in memory, after
 which the timestamp reverts to 1970, i.e. moves backwards in time.
@@ -50,7 +50,7 @@ used to avoid compressing small files that end up taking more space once
 support is required (from Linux v4.15).
 
 It is possible to have some files, or portions of some files, kept
-uncompressed and properly aligned to allow direct mapping into user
+uncompressed and properly aligned to allow direct mapping into the user
 space for eXecute-In-Place (XIP) of program files. This requires that
 the cramfs image be stored in ROM or Flash and accessible via the memory
 bus. This is currently performed on the read-only segments of ELF files

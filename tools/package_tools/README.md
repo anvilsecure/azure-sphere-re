@@ -1,6 +1,8 @@
 # Azure Sphere Package Tools
 
-These are some tools to work with the images in the recovery firmware and application images. The tools can be run alone, or imported into other scripts.
+This is a set of scripts to help parse image metadata, signatures, and side loading apps to the device. The tools can be run alone or imported into other scripts.
+
+These tools work with the images in the recovery firmware and application images. 
 
 ## Dependencies
 
@@ -39,14 +41,14 @@ Signature:
 
 Python script that signs an image file using the development key embedded within the azpshere CLI tool.
 
-Verify a file:
+1. Verify a file:
 
 ```
 > ./signer.py verify main.imagepackage
 Verified!
 ```
 
-Generate a signature for a file:
+2. Generate a signature for a file:
 
 ```
 > ./signer.py sign main.imagepackage 
@@ -57,7 +59,7 @@ Calculated Signature:
 00000030: 21 F2 62 77 0D 72 81 A6  61 17 19 8E 98 CD E5 10  !.bw.r..a.......
 ```
 
-Append a signature to a file:
+3. Append a signature to a file:
 
 ```
 > ./signer.py sign main.imagepackage --out main_signed.imagepackage
@@ -70,7 +72,7 @@ Calculated Signature:
 
 ## Uploader
 
-A python script to side load apps onto a device. Does the same functionality as the `azphere dev sl deploy -p <app_image_path>`, but without any client side checks.
+A Python script to side load apps onto a device - the same functionality as the `azphere dev sl deploy -p <app_image_path>`, but without any client-side checks.
 
 ```
 > ./uploader.py main.imagepackage
