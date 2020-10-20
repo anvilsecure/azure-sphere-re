@@ -4,5 +4,7 @@ The SDK provided by Microsoft is very limited and does not expose the underlinin
 
 # Using
 
-Unpack the arm-linux-musleabihf.tar.xz and add `<unpack_dir>/bin ` directory to your `$PATH`
+1. Join the parts back together: `cat arm-linux-musleabihf.tar.xz.part-* > arm-linux-musleabihf.tar.xz`
+2. Unpack the arm-linux-musleabihf.tar.xz
+3. Add `<unpack_dir>/bin ` directory to your `$PATH`
 
