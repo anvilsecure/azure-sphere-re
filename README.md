@@ -6,7 +6,7 @@ Since development boards are cheap, we bought a few and took them apart. We test
 
 We developed several tools to help with the exploration and identified a couple issues that were also identified by teams participating in the closed bounty challenge.
 
-Most of the issues we and others found have been fixed in the current release of the Sphere OS (20.08 Update 1), so our reverse engineering notes may be out of date.
+The issues we and others found have been fixed in the latest release, so our reverse engineering notes may be out of date.
 
 ## Issues
 
